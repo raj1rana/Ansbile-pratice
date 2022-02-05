@@ -1,0 +1,12 @@
+--- 
+all: 
+  children: 
+    setup: 
+      hosts: 
+        localhost: 
+          ansible_connection: ssh
+          ansible_host: "127.0.0.1"
+          ansible_ssh_pass: admin
+          ansible_sudo_pass: admin
+          ansible_user: admin
+    ungrouped: {}
