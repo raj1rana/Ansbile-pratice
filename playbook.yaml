@@ -1,16 +1,21 @@
-- hosts: localhost
-  vars_file: [vars.yaml]
-  become: yes
+  hosts: localhost
+  vars_file: 
+    - vars.yaml
+  become: true
   tasks: 
-    - name: Install apache2
-      apt:
+    - 
+      apt: 
         name: "{{ apache2_package }}"
         state: "{{ state }}"
-    - name: Install mysql
-      apt:
+      name: "Install apache2"
+    - 
+      apt: 
         name: "{{ mysql_package }}"
         state: "{{ state }}"
-    - name: Install php
-      apt:
+      name: "Install mysql"
+    - 
+      apt: 
         name: "{{ php_package }}"
         state: "{{ state }}"
+      name: "Install php"
+ 
